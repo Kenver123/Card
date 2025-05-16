@@ -99,3 +99,4 @@ async function miyuCard({
   return frame.toBuffer('image/png');
 
 }
+module.exports = { miyuCard };
