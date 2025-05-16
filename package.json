@@ -1,0 +1,15 @@
+{
+  "name": "miyucard",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kenver",
+  "license": "ISC",
+  "description": "A music card for miyu",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.70"
+  }
+}
