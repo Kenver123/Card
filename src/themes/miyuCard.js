@@ -30,7 +30,7 @@ async function miyuCard({
     songRequester = `${songRequester.slice(0, 10)}...`;
 
   const backgroundUrl = 'https://i.ibb.co/608WyPTV/new.png';
-  const background = await canvas.loadImage(backgroundUrl);
+  const background = await loadImage(backgroundUrl);
   ctx.drawImage(background, 0, 0, frame.width, frame.height);
 
   const thumbnailCanvas = createCanvas(800, 200); // Mengubah lebar kanvas
@@ -50,7 +50,7 @@ async function miyuCard({
   } catch (error) {
     // Mengatasi kesalahan ketika gambar tidak dapat dimuat
     console.error('MUSICARD: Thumbnail image failed to load, not supported [Lofi & Radio]');
-    thumbnailImage = await canvas.loadImage(`https://i.ibb.co/tpnVyp77/miyu.png`); // Gunakan gambar default atau URL alternatif
+    thumbnailImage = await loadImage(`https://i.ibb.co/tpnVyp77/miyu.png`); // Gunakan gambar default atau URL alternatif
   }
 
   const thumbnailSize = Math.min(thumbnailImage.width, thumbnailImage.height);
@@ -99,4 +99,5 @@ async function miyuCard({
   return frame.toBuffer('image/png');
 
 }
+
 module.exports = { miyuCard };
